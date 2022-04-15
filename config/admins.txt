@@ -14,6 +14,7 @@ Diolko = HeadAdmin
 Retroname = Retromeme
 Jhonatan2701 = GameMaster
 Wife = Amora
+Fegelein17 = C0der
 
 # Temporarioow, pode me tirar depois tá?
 Aypa = C0der
