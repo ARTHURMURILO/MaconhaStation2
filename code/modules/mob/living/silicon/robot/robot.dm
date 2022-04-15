@@ -756,6 +756,17 @@
 /mob/living/silicon/robot/modules/blade_wolf
 	set_module = /obj/item/robot_module/blade_wolf
 
+/mob/living/silicon/robot/modules/blade_wolf/Initialize()
+	. = ..()
+	cell = new /obj/item/stock_parts/cell/infinite/experimental(src, 25000)
+	laws = new /datum/ai_laws/bladewolf_override()
+
+/mob/living/silicon/robot/modules/blade_wolf/emp_act(severity)
+	return
+
+/mob/living/silicon/robot/modules/blade_wolf/allowed(mob/M)
+	return 0 // ALWAYS DENY ACCESS.
+
 /mob/living/silicon/robot/modules/clown
 	set_module = /obj/item/robot_module/clown
 

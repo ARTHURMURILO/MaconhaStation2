@@ -1671,9 +1671,7 @@
 	basic_modules = list(
 		/obj/item/inducer/cyborg,
 		/obj/item/borg/sight/xray/truesight_lens,
-		/obj/item/borg/sight/thermal,
 		/obj/item/borg/sight/meson,
-		/obj/item/borg/sight/material,
 		/obj/item/borg/sight/hud/med,
 		/obj/item/borg/sight/hud/sec,
 		/obj/item/assembly/flash/cyborg,
@@ -1687,7 +1685,6 @@
 		/obj/item/melee/transforming/energy/sword/cyborg,
 		/obj/item/gun/energy/printer,
 		/obj/item/gun/ballistic/revolver/grenadelauncher/cyborg,
-		/obj/item/clothing/mask/gas/sechailer/cyborg/bladewolf,
 		/obj/item/pinpointer/crew,
 		/obj/item/stack/sheet/metal/cyborg,
 		/obj/item/stack/sheet/glass/cyborg,
@@ -1697,13 +1694,17 @@
 		/obj/item/stack/cable_coil/cyborg,
 		/obj/item/gun/energy/kinetic_accelerator/cyborg,
 		/obj/item/gun/energy/plasmacutter/cyborg,
-		/obj/item/weapon/gripper,
+		/obj/item/gripper,
 		/obj/item/lightreplacer/cyborg,
 		/obj/item/geiger_counter/cyborg,
 		/obj/item/construction/rcd/borg,
 		/obj/item/pipe_dispenser,
 		/obj/item/weldingtool/largetank/cyborg,
-		/obj/item/chainsaw/doomslayer/cyborg)
+		/obj/item/chainsaw/doomslayer/cyborg,
+		/obj/item/holosign_creator/atmos,
+		/obj/item/card/emag,
+		/obj/item/mop/cyborg,
+		/obj/item/analyzer/ranged)
 	emag_modules = list(/obj/item/reagent_containers/borghypo/hacked)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/medical,
