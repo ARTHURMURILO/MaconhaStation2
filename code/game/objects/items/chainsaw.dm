@@ -119,7 +119,7 @@
 
 
 	if (on)
-		if (W && istype(W, turf/closed/wall))
+		if (W && istype(W, /turf/closed/wall))
 			to_chat(user, SPAN_NOTICE("You begin slicing through the [W]"))
 			do_sparks(rand(1,2), TRUE, W)
 			playsound(src, 'sound/weapons/chainsawhit.ogg', 100, 1)
@@ -130,7 +130,7 @@
 				W.dismantle_wall()
 				return
 
-		if (A && istype(A, obj/machinery/door/airlock))
+		if (A && istype(A, /obj/machinery/door/airlock))
 			to_chat(user, SPAN_NOTICE("You begin slicing through the [A]"))
 			do_sparks(rand(1,2), TRUE, A)
 			playsound(src, 'sound/weapons/chainsawhit.ogg', 100, 1)
@@ -142,7 +142,7 @@
 				qdel(A)
 				return
 
-		if (G && istype(G, obj/structure/girder))
+		if (G && istype(G, /obj/structure/girder))
 			to_chat(user, SPAN_NOTICE("You begin slicing through the [G]"))
 			do_sparks(rand(1,2), TRUE, G)
 			playsound(src, 'sound/weapons/chainsawhit.ogg', 100, 1)
