@@ -153,6 +153,17 @@
 		cell = null
 		update_icon()
 
+/obj/item/inducer/cyborg/attack_self(mob/user)
+	return
+
+/obj/item/inducer/cyborg/cantbeused(mob/user)
+	return FALSE
+
+/obj/item/inducer/cyborg/attacked_by(obj/item/I, mob/living/user, attackchain_flags, damage_multiplier)
+	return ..()
+
+/obj/item/inducer/cyborg/emp_act(severity)
+	return
 
 /obj/item/inducer/examine(mob/living/M)
 	. = ..()

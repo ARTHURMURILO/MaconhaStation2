@@ -29,8 +29,10 @@ endmap
 	#voteweight 0.5
 endmap
 
-#map pubbystation
-#endmap
+map pubbystation
+
+
+endmap
 
 #map omegastation
 	#maxplayers 35

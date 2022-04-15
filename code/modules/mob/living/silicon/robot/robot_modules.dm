@@ -144,8 +144,10 @@
 */ //replaced by the one in modular_sand
 
 //Adds flavoursome dogborg items to dogborg variants optionally without mechanical benefits
-/obj/item/robot_module/proc/dogborg_equip()
+/obj/item/robot_module/proc/dogborg_equip(offset=TRUE||FALSE)
 	has_snowflake_deadsprite = TRUE
+	if (offset)
+		cyborg_pixel_offset = -16
 	cyborg_pixel_offset = -16
 	hat_offset = INFINITY
 	basic_modules += new /obj/item/dogborg_nose(src)
@@ -259,7 +261,11 @@
 	RM.rebuild_modules()
 	INVOKE_ASYNC(RM, .proc/do_transform_animation)
 	if(RM.dogborg || R.dogborg)
-		RM.dogborg_equip()
+		if (istype(RM, /obj/item/robot_module/blade_wolf))
+			RM.dogborg_equip(FALSE)
+			R.cell.self_recharge = TRUE
+		else
+			RM.dogborg_equip(TRUE)
 		R.typing_indicator_state = /obj/effect/overlay/typing_indicator/machine/dogborg
 	else
 		R.typing_indicator_state = /obj/effect/overlay/typing_indicator/machine
@@ -1668,6 +1674,65 @@
 	max_energy = 30
 	recharge_rate = 1
 	name = "Wrapping Paper Storage"
+
+/obj/item/robot_module/blade_wolf
+	name = "Blade Wolf"
+	basic_modules = list(
+		/obj/item/inducer/cyborg,
+		/obj/item/borg/sight/xray/truesight_lens,
+		/obj/item/borg/sight/meson,
+		/obj/item/borg/sight/hud/med,
+		/obj/item/borg/sight/hud/sec,
+		/obj/item/assembly/flash/cyborg,
+		/obj/item/extinguisher/mini,
+		/obj/item/wrench/cyborg,
+		/obj/item/crowbar/cyborg,
+		/obj/item/wirecutters/cyborg,
+		/obj/item/multitool/cyborg,
+		/obj/item/restraints/handcuffs/cable/zipties,
+		/obj/item/melee/baton/loaded,
+		/obj/item/melee/transforming/energy/sword/cyborg,
+		/obj/item/gun/energy/printer,
+		/obj/item/gun/ballistic/revolver/grenadelauncher/cyborg,
+		/obj/item/pinpointer/crew,
+		/obj/item/stack/sheet/metal/cyborg,
+		/obj/item/stack/sheet/glass/cyborg,
+		/obj/item/stack/sheet/rglass/cyborg,
+		/obj/item/stack/rods/cyborg,
+		/obj/item/stack/tile/plasteel/cyborg,
+		/obj/item/stack/cable_coil/cyborg,
+		/obj/item/gun/energy/kinetic_accelerator/cyborg,
+		/obj/item/gun/energy/plasmacutter/cyborg,
+		/obj/item/gripper,
+		/obj/item/lightreplacer/cyborg,
+		/obj/item/geiger_counter/cyborg,
+		/obj/item/construction/rcd/borg,
+		/obj/item/pipe_dispenser,
+		/obj/item/weldingtool/largetank/cyborg,
+		/obj/item/chainsaw/doomslayer/cyborg,
+		/obj/item/holosign_creator/atmos,
+		/obj/item/card/emag,
+		/obj/item/mop/cyborg,
+		/obj/item/analyzer/ranged)
+	emag_modules = list(/obj/item/reagent_containers/borghypo/hacked)
+	ratvar_modules = list(
+		/obj/item/clockwork/slab/cyborg/medical,
+		/obj/item/clockwork/weapon/ratvarian_spear)
+	cyborg_base_icon = "blade"
+	cyborg_icon_override = 'modular_maconha/icons/mob/robots.dmi'
+	moduleselect_icon = "standard"
+	hat_offset = 3
+
+/obj/item/robot_module/blade_wolf/be_transformed_to(obj/item/robot_module/old_module)
+	cyborg_base_icon = "blade"
+	cyborg_icon_override = 'modular_maconha/icons/mob/robots.dmi'
+	dogborg = TRUE
+	return ..()
+
+/obj/item/robot_module/blade_wolf/do_transform_animation()
+	. = ..()
+	to_chat(loc, SPAN_USERDANGER("Interface Prototype LQ-84i active."))
+
 
 /obj/item/robot_module/syndicate/spider// used for space ninja and their cyborg hacking special objective
 	name = "Spider Assault"

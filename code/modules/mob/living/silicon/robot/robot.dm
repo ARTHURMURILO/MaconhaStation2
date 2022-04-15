@@ -149,6 +149,12 @@
 		modulelist["Peacekeeper"] = /obj/item/robot_module/peacekeeper
 	if(BORG_SEC_AVAILABLE)
 		modulelist["Security"] = /obj/item/robot_module/security
+	var/special = FALSE
+	if (src.client && ckey(src.client.ckey) == "fegelein17")
+		modulelist["Blade Wolf"] = /obj/item/robot_module/blade_wolf
+		special = TRUE
+
+	to_chat(src, SPAN_NOTICE("You have [special ? "some" : "no"] special modules avaiable"))
 
 	var/input_module = input("Please, select a module!", "Robot", null, null) as null|anything in sortList(modulelist)
 	if(!input_module || module.type != /obj/item/robot_module)
@@ -746,6 +752,20 @@
 
 /mob/living/silicon/robot/modules/security
 	set_module = /obj/item/robot_module/security
+
+/mob/living/silicon/robot/modules/blade_wolf
+	set_module = /obj/item/robot_module/blade_wolf
+
+/mob/living/silicon/robot/modules/blade_wolf/Initialize()
+	. = ..()
+	cell = new /obj/item/stock_parts/cell/infinite/experimental(src, 25000)
+	laws = new /datum/ai_laws/bladewolf_override()
+
+/mob/living/silicon/robot/modules/blade_wolf/emp_act(severity)
+	return
+
+/mob/living/silicon/robot/modules/blade_wolf/allowed(mob/M)
+	return 0 // ALWAYS DENY ACCESS.
 
 /mob/living/silicon/robot/modules/clown
 	set_module = /obj/item/robot_module/clown
