@@ -9,10 +9,12 @@
 ###############################################################################################
 
 Maconha0420 = Host
+BrazilianStation13 = Host
 BiellMX = HeadAdmin
 Diolko = HeadAdmin
-Retroname = Retromeme
+Retroname = GameAdmin
 Jhonatan2701 = GameMaster
+Marco25555 = LazyMaster
 Wife = Amora
 Fegelein17 = C0der
 
