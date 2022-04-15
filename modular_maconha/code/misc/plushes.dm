@@ -82,12 +82,7 @@ obj/item/toy/plush/speaking/life
 	gender = MALE
 	squeak_override = list('modular_citadel/sound/voice/bark1.ogg'=1, 'modular_citadel/sound/voice/bark2.ogg'=1)
 
-	var/list/spawns = list(/obj/item/reagent_containers/food/drinks/soda_cans/guarana,
-					/obj/item/reagent_containers/food/drinks/soda_cans/stalker,
-					/obj/item/reagent_containers/food/drinks/corote,
-					/obj/item/reagent_containers/food/drinks/corote/uva,
-					/obj/item/card/emag,
-					/obj/item/reagent_containers/food/snacks/trakinas,
+	var/list/spawns = list(/obj/item/card/emag,
 					/obj/item/gun/ballistic/automatic/pistol)
 
 
