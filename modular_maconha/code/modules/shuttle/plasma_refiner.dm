@@ -1,7 +1,6 @@
 /obj/machinery/atmospherics/components/unary/plasma_refiner
 	name = "plasma refinery"
 	desc = "A refinery that burns plasma sheets into plasma gas."
-	icon = "icons/obj/machines/mining_machines.dmi"
 	icon_state = "furnace"
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/plasma_refiner
