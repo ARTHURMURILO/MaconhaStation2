@@ -297,6 +297,9 @@
 	rating = 100
 	chargerate = 30000
 
+/obj/item/stock_parts/cell/infinite/experimental
+	name = "experimental military power cell"
+
 /obj/item/stock_parts/cell/infinite/use()
 	return 1
 
