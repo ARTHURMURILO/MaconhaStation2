@@ -537,9 +537,6 @@
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8
 	},
-/obj/machinery/door/poddoor/shutters/radiation/preopen{
-	id = radiation
-	},
 /obj/machinery/door/firedoor/heavy,
 /turf/open/floor/engine,
 /area/engineering/main/reactor_core)
