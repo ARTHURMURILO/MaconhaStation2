@@ -538,6 +538,9 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/poddoor/shutters/radiation/preopen{
+	id = 6565
+	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_core)
 "bx" = (
@@ -1595,7 +1598,9 @@
 "el" = (
 /obj/structure/table,
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/computer/reactor/fuel_rods/cargo,
+/obj/machinery/computer/reactor/stats/cargo{
+	id = 2323
+	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
 "em" = (
@@ -1644,7 +1649,7 @@
 /obj/structure/table,
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/button/door{
-	id = 123456
+	id = 6565
 	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
@@ -1668,12 +1673,14 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/machinery/door/poddoor/shutters/radiation/preopen{
-	id = radiation
-	},
 /obj/machinery/door/firedoor/heavy,
 /obj/effect/landmark/event_spawn,
-/obj/machinery/atmospherics/components/binary/stormdrive_reactor,
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor{
+	reactor_id = 3232
+	},
+/obj/machinery/door/poddoor/shutters/radiation/preopen{
+	id = 6565
+	},
 /turf/open/floor/plating,
 /area/engineering/main/reactor_core)
 "ew" = (
@@ -2358,11 +2365,13 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/machinery/door/poddoor/shutters/radiation/preopen{
-	id = radiation
-	},
 /obj/machinery/door/firedoor/heavy,
-/obj/machinery/atmospherics/components/trinary/nuclear_reactor/cargo,
+/obj/machinery/door/poddoor/shutters/radiation/preopen{
+	id = 6565
+	},
+/obj/machinery/atmospherics/components/trinary/nuclear_reactor{
+	id = 2323
+	},
 /turf/open/floor/plating,
 /area/engineering/main/reactor_core)
 "go" = (
@@ -4507,7 +4516,8 @@
 /area/service/bar)
 "lQ" = (
 /obj/machinery/computer/ship/reactor_control_computer{
-	dir = 1
+	dir = 1;
+	reactor_id = 3232
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/engine,
@@ -5114,10 +5124,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/poddoor/shutters/radiation/preopen{
-	id = radiation
-	},
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/poddoor/shutters/radiation/preopen{
+	id = 6565
+	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_core)
 "nw" = (
@@ -8241,10 +8251,10 @@
 /turf/open/floor/plasteel,
 /area/engineering/main)
 "vN" = (
-/obj/machinery/door/poddoor/shutters/radiation/preopen{
-	id = radiation
-	},
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/poddoor/shutters/radiation/preopen{
+	id = 6565
+	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_core)
 "vO" = (
@@ -8668,7 +8678,7 @@
 "wS" = (
 /obj/structure/table,
 /obj/machinery/button/door{
-	id = radiation
+	id = 6565
 	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
@@ -8946,10 +8956,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/poddoor/shutters/radiation/preopen{
-	id = radiation
-	},
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/poddoor/shutters/radiation/preopen{
+	id = 6565
+	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_core)
 "xx" = (
@@ -10944,7 +10954,9 @@
 /obj/structure/table,
 /obj/machinery/door/firedoor/border_only,
 /obj/item/multitool,
-/obj/machinery/computer/reactor/control_rods/cargo,
+/obj/machinery/computer/reactor/fuel_rods/cargo{
+	id = 2323
+	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
 "CG" = (
@@ -12433,10 +12445,10 @@
 /area/maintenance/port/aft)
 "GE" = (
 /obj/machinery/atmospherics/pipe/simple,
-/obj/machinery/door/poddoor/shutters/radiation/preopen{
-	id = radiation
-	},
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/poddoor/shutters/radiation/preopen{
+	id = 6565
+	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_core)
 "GF" = (
@@ -13178,7 +13190,9 @@
 "IC" = (
 /obj/structure/table,
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/computer/reactor/stats/cargo,
+/obj/machinery/computer/reactor/control_rods/cargo{
+	id = 2323
+	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
 "ID" = (
@@ -13455,7 +13469,7 @@
 /area/engineering/atmos)
 "Js" = (
 /obj/machinery/button/door{
-	id = radiation
+	id = 6565
 	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_core)
@@ -13967,10 +13981,10 @@
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 4
 	},
-/obj/machinery/door/poddoor/shutters/radiation/preopen{
-	id = radiation
-	},
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/poddoor/shutters/radiation/preopen{
+	id = 6565
+	},
 /turf/open/floor/engine,
 /area/engineering/main/reactor_core)
 "KE" = (
