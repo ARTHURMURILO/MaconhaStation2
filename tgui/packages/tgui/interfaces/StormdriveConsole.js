@@ -93,7 +93,6 @@ export const StormdriveConsole = (props, context) => {
               value={data.heat/data.reactor_meltdown}
               ranges={{
                 good: [], 
-                average: [(data.reactor_hot/data.reactor_meltdown), (data.reactor_critical/data.reactor_meltdown)],
                 bad: [(data.reactor_critical/data.reactor_meltdown), Infinity],
               }} >
               {toFixed(data.heat) + ' °C'}
@@ -141,8 +140,6 @@ export const StormdriveConsole = (props, context) => {
               value={data.total_moles/data.mole_threshold_very_high}
               ranges={{
                 good: [],
-                average: [(data.mole_threshold_high/data.mole_threshold_very_high), Infinity],
-                bad: [-Infinity, data.reaction_rate/data.mole_threshold_very_high],
               }}>
               {data.total_moles + ' mol'}
             </ProgressBar>
