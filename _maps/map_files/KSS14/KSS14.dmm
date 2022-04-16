@@ -763,6 +763,8 @@
 	pixel_x = -5;
 	pixel_y = 30
 	},
+/obj/structure/table,
+/obj/machinery/computer/reactor/pump/rbmk_output,
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
 "bY" = (
@@ -1593,9 +1595,7 @@
 "el" = (
 /obj/structure/table,
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/computer/reactor/fuel_rods/cargo{
-	id = shikeira
-	},
+/obj/machinery/computer/reactor/fuel_rods/cargo,
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
 "em" = (
@@ -1664,7 +1664,6 @@
 /turf/open/floor/plasteel,
 /area/science)
 "ev" = (
-/obj/machinery/atmospherics/components/binary/stormdrive_reactor,
 /obj/structure/fans/tiny,
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -1674,6 +1673,7 @@
 	},
 /obj/machinery/door/firedoor/heavy,
 /obj/effect/landmark/event_spawn,
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor,
 /turf/open/floor/plating,
 /area/engineering/main/reactor_core)
 "ew" = (
@@ -2361,10 +2361,8 @@
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = radiation
 	},
-/obj/machinery/atmospherics/components/trinary/nuclear_reactor/cargo{
-	id = shikeira
-	},
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/atmospherics/components/trinary/nuclear_reactor/cargo,
 /turf/open/floor/plating,
 /area/engineering/main/reactor_core)
 "go" = (
@@ -4512,7 +4510,6 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/item/multitool,
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
 "lR" = (
@@ -7269,13 +7266,10 @@
 /turf/open/floor/plasteel,
 /area/command/heads_quarters/hop)
 "td" = (
-/obj/machinery/atmospherics/components/binary/stormdrive_reactor{
-	name = "class III nuclear storm drive";
-	desc = "This is a old prototype of the monstrosity is what we got when nanotrasen engineers decided to inject magnetically constricted plasma into a nuclear reactor. It's able of outputting an ungodly amount of super-heated plasma, radiation, and fire... But god help you if it ever melts down. maybe this reactor still works well.... theirs only one way to find out!"
-	},
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/machinery/atmospherics/components/binary/stormdrive_reactor,
 /turf/open/floor/engine,
 /area/hallway/secondary/exit)
 "te" = (
@@ -10949,10 +10943,8 @@
 "CF" = (
 /obj/structure/table,
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/computer/reactor/control_rods/cargo{
-	id = shikeira
-	},
 /obj/item/multitool,
+/obj/machinery/computer/reactor/control_rods/cargo,
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
 "CG" = (
@@ -12058,6 +12050,8 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
+/obj/structure/table,
+/obj/machinery/computer/reactor/pump/rbmk_input,
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
 "Fy" = (
@@ -13184,9 +13178,7 @@
 "IC" = (
 /obj/structure/table,
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/computer/reactor/stats/cargo{
-	id = shikeira
-	},
+/obj/machinery/computer/reactor/stats/cargo,
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
 "ID" = (
@@ -14075,6 +14067,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/table,
+/obj/machinery/computer/reactor/pump/rbmk_moderator,
 /turf/open/floor/engine,
 /area/engineering/main/reactor_control)
 "KU" = (
