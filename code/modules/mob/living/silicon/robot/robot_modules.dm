@@ -1717,7 +1717,7 @@
 /obj/item/robot_module/blade_wolf/be_transformed_to(obj/item/robot_module/old_module)
 	cyborg_base_icon = "blade"
 	cyborg_icon_override = 'modular_maconha/icons/mob/robots.dmi'
-	dogborg = TRUE
+	dogborg = FALSE
 	return ..()
 
 /obj/item/robot_module/blade_wolf/do_transform_animation()

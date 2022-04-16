@@ -136,7 +136,7 @@
 				user.visible_message(SPAN_DANGER("[user] slices the [D] open"), SPAN_NOTICE("You slice the [D] open"))
 				do_sparks(rand(1,2), TRUE, D)
 				playsound(src, 'sound/weapons/chainsawhit.ogg', 100, 1)
-				W.dismantle_wall()
+				qdel(D)
 				return
 
 		if (A && istype(A, /obj))
