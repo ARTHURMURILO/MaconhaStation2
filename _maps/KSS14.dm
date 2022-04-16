@@ -1,1 +1,1 @@
-#define FORCE_MAP "_maps/KSS14.json"
+#define FORCE_MAP "_maps/kss14.json"
