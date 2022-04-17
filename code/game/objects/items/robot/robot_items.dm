@@ -1013,32 +1013,6 @@
 						Dogborg stuff
 ***********************************************************************/
 ///Mere cosmetic dogborg items, remnants of what were once the most annoying cyborg modules.
-/obj/item/dogborg_tongue
-	name = "synthetic tongue"
-	desc = "Useful for slurping mess off the floor before affectionally licking the crew members in the face."
-	icon = 'icons/mob/robot_items.dmi'
-	icon_state = "synthtongue"
-	hitsound = 'sound/effects/attackblob.ogg'
-	desc = "For giving affectionate kisses."
-	item_flags = NOBLUDGEON
-
-/obj/item/dogborg_tongue/afterattack(atom/target, mob/user, proximity)
-	. = ..()
-	if(!proximity || !isliving(target))
-		return
-	var/mob/living/silicon/robot/R = user
-	var/mob/living/L = target
-	if(L.ckey && !(L.client?.prefs.vore_flags & LICKABLE))
-		to_chat(R, "<span class='danger'>ERROR ERROR: Target not lickable. Aborting display-of-affection subroutine.</span>")
-		return
-
-	if(check_zone(R.zone_selected) == "head")
-		R.visible_message("<span class='warning'>\the [R] affectionally licks \the [L]'s face!</span>", "<span class='notice'>You affectionally lick \the [L]'s face!</span>")
-		playsound(R, 'sound/effects/attackblob.ogg', 50, 1)
-	else
-		R.visible_message("<span class='warning'>\the [R] affectionally licks \the [L]!</span>", "<span class='notice'>You affectionally lick \the [L]!</span>")
-		playsound(R, 'sound/effects/attackblob.ogg', 50, 1)
-
 /obj/item/dogborg_nose
 	name = "boop module"
 	desc = "The BOOP module"

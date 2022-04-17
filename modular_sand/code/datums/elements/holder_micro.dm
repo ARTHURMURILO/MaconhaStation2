@@ -143,7 +143,3 @@
 	var/obj/item/clothing/head/mob_holder/micro/micro_holder = loc
 	if(istype(micro_holder))
 		return micro_holder.Adjacent(neighbor)
-
-/obj/item/clothing/head/mob_holder/micro/attack(mob/living/pred, mob/living/user)
-	user.vore_attack(user, held_mob, pred)
-	return STOP_ATTACK_PROC_CHAIN

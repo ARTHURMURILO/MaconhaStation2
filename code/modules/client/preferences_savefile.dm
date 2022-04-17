@@ -120,21 +120,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		if(digi == "Digitigrade Legs")
 			WRITE_FILE(S["feature_lizard_legs"], "Digitigrade")
 
-	if(current_version < 26)
-		var/vr_path = "data/player_saves/[parent.ckey[1]]/[parent.ckey]/vore/character[default_slot].json"
-		if(fexists(vr_path))
-			var/list/json_from_file = json_decode(file2text(vr_path))
-			if(json_from_file)
-				if(json_from_file["digestable"])
-					vore_flags |= DIGESTABLE
-				if(json_from_file["devourable"])
-					vore_flags |= DEVOURABLE
-				if(json_from_file["feeding"])
-					vore_flags |= FEEDING
-				if(json_from_file["lickable"])
-					vore_flags |= LICKABLE
-				belly_prefs = json_from_file["belly_prefs"]
-				vore_taste = json_from_file["vore_taste"]
 
 		for(var/V in all_quirks) // quirk migration
 			switch(V)
@@ -167,24 +152,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		if(malformed_hockeys[hockey])
 			features["cock_shape"] = malformed_hockeys[hockey]
 			features["cock_taur"] = TRUE
-
-	if(current_version < 29)
-		var/digestable
-		var/devourable
-		var/feeding
-		var/lickable
-		S["digestable"]						>> digestable
-		S["devourable"]						>> devourable
-		S["feeding"]						>> feeding
-		S["lickable"]						>> lickable
-		if(digestable)
-			vore_flags |= DIGESTABLE
-		if(devourable)
-			vore_flags |= DEVOURABLE
-		if(feeding)
-			vore_flags |= FEEDING
-		if(lickable)
-			vore_flags |= LICKABLE
 
 	if(current_version < 30)
 		switch(features["taur"])
@@ -1145,11 +1112,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 			job_preferences -= j
 
 	all_quirks = SANITIZE_LIST(all_quirks)
-
-	vore_flags						= sanitize_integer(vore_flags, 0, MAX_VORE_FLAG, 0)
-	vore_taste						= copytext(vore_taste, 1, MAX_TASTE_LEN)
-	vore_smell						= copytext(vore_smell, 1, MAX_TASTE_LEN)
-	belly_prefs 					= SANITIZE_LIST(belly_prefs)
 
 	cit_character_pref_load(S)
 

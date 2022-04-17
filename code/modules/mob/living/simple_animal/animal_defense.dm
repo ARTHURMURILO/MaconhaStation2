@@ -14,8 +14,6 @@
 
 		if(INTENT_GRAB)
 			if(grab_state >= GRAB_AGGRESSIVE && isliving(pulling))
-				vore_attack(M, pulling)
-			else
 				grabbedby(M)
 
 		if(INTENT_DISARM)

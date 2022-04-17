@@ -109,6 +109,4 @@
 		S.sharerDies(gibbed)
 
 	set_ssd_indicator(FALSE) //SKYRAT CHANGE - ssd indicator
-
-	release_vore_contents(silent = TRUE)
 	return TRUE

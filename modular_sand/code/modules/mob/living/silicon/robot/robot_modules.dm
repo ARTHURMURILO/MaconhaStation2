@@ -273,7 +273,6 @@
 		/obj/item/soap/nanotrasen,
 		/obj/item/borg/cyborghug,
 		/obj/item/dogborg_nose,
-		/obj/item/dogborg_tongue,
 		/obj/item/borg_shapeshifter/stable)
 	moduleselect_icon = "standard"
 	hat_offset = -3

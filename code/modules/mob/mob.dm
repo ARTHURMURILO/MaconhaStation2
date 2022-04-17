@@ -18,7 +18,6 @@
 	update_movespeed(TRUE)
 	initialize_actionspeed()
 	init_rendering()
-	hook_vr("mob_new",list(src))
 
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
 	remove_from_mob_list()
