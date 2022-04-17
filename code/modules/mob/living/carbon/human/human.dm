@@ -70,7 +70,10 @@
 	. = ..()
 	. += "Intent: [a_intent]"
 	. += "Move Mode: [m_intent]"
-	if(internal)
+
+	// This shit was causing errors every time.
+	// If anyone wants to fix it, good luck.
+/*	if(internal)
 		if(!internal.air_contents)
 			qdel(internal)
 		else
@@ -78,6 +81,7 @@
 			. += "Internal Atmosphere Info: [internal.name]"
 			. += "Tank Pressure: [internal.air_contents.return_pressure()]"
 			. += "Distribution Pressure: [internal.distribute_pressure]"
+			*/
 	if(mind)
 		var/datum/antagonist/changeling/changeling = mind.has_antag_datum(/datum/antagonist/changeling)
 		if(changeling)
