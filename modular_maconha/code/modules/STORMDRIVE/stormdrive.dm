@@ -915,12 +915,10 @@ Control Rods
 		if(heat <= reactor_temperature_critical) //This implies that we've now stopped melting down.
 			warning_state = 0
 			send_alert("Nuclear meltdown averted. Manual reactor inspection is strongly advised", override=TRUE)
-			send_alert("Nuclear meltdown aver!@#@#!@# nono stop that i want to be free from the engineers!", override=TRUE)
 		return FALSE
 	if(heat >= reactor_temperature_critical)
 		send_alert("DANGER: Reactor core overheating. Nuclear meltdown imminent", override=TRUE)
 		send_alert("GUIDE: press scram in the console and cut fuel supply while adding co2 on the reactor fuel line", override=TRUE)
-		send_alert("all the warning was a error please ignore! by:souldrive", override=TRUE)
 		warning_state = WARNING_STATE_OVERHEAT
 		//var/overheating69 = 'Reactor/core_overheating.ogg'
 		SEND_SOUND(GLOB.player_list, 'Reactor/core_overheating.ogg')
