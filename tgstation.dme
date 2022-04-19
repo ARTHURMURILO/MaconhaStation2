@@ -3845,6 +3845,8 @@
 #include "modular_citadel\code\modules\vectorcrafts\vectorcraft.dm"
 #include "modular_citadel\code\modules\vectorcrafts\vectortruck.dm"
 #include "modular_citadel\code\modules\vectorcrafts\vectorvariants.dm"
+#include "modular_maconha\code\modules\STORMDRIVE\control_rods.dm"
+#include "modular_maconha\code\modules\STORMDRIVE\stormdrive.dm"
 #include "modular_maconha\code\sorcery\sorcery.dm"
 #include "modular_maconha\code\weapons\sonic_weaponry.dm"
 #include "modular_maconha\code\weapons\weapons.dm"
